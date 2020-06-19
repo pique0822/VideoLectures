@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Video Responses</title>
+		<link rel="icon" href="imgs/vteractive_logo.png" type="image/icon type">
+		<link rel="stylesheet" href="css/variables.css">
+		<link rel="stylesheet" href="css/responses.css">
+		<link rel="stylesheet" href="css/header.css">
+	</head>
+	<body>
+		<div id="firebaseui-auth-container"></div>
+		<div id="loader"></div>
+		<!-- header -->
+		<div id='title_block'>
+			<img id='logo_img' src='imgs/vteractive_name.png' />
+			<ul id='menu_buttons'>
+			  <li><button class='active' id='responses' onclick='goToResponses()'>Responses</button></li>
+			  <li><button id='new_video' onclick='goToNewVideo()'>Make a Video</button></li>
+			  <li><button id='load_video' onclick='goToLoadVideo()'>Find a Video</button></li>
+			</ul>
+		</div>
+		<!-- Title -->
+		<div id='video_ID'></div>
+		<!-- User Content -->
+		<div id='all_responses'>
+		</div>
+		<!-- scripts -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyClcxTy4TnKea5jPqVcVkoR626f4lHG8Xs",
+		    authDomain: "interactivevideolecture.firebaseapp.com",
+		    databaseURL: "https://interactivevideolecture.firebaseio.com",
+		    projectId: "interactivevideolecture",
+		    storageBucket: "interactivevideolecture.appspot.com",
+		    messagingSenderId: "5161219010",
+		    appId: "1:5161219010:web:64c89af841044856f39c5b",
+		    measurementId: "G-J3NJ0WKRF1"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		  firebase.analytics();
+		</script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+		<script type="text/javascript" src='js/responses.js'></script>
+	</body>
+</html>

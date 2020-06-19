@@ -1,0 +1,98 @@
+body{
+	font-family: var(--font);
+}
+#content_block{
+  position: absolute;
+  top:15vw;
+}
+
+#firebaseui-auth-container{
+  position: absolute;
+  left: 50%;
+  top: -1%;
+  width:30%;
+
+  padding-left: 35%;
+  padding-right: 35%;
+  padding-top: 10%;
+  padding-bottom: 100%;
+
+  background-color: rgb(0,0,0,0.8);
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+}
+
+#loader{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width:100%;
+  height:100%;
+  background-color: rgb(0,0,0,0.8);
+  z-index: 10;
+}
+
+.video_container{
+	position: absolute;
+	top: 0;
+	height: 30vw;
+}
+
+.timestamp_container{
+	position: absolute;
+	top: 30vw;
+	max-height: 70vw;
+	width: 100vw;
+}
+
+#video_player{
+	position: relative;
+	left:50vw;
+	width: 50vw;
+	height: var(--video_height);
+
+	transform: translateX(-50%);
+}
+
+#video_upload_container{
+	position: relative;
+	left:50vw;
+
+	transform: translateX(-25%);
+}
+
+#timestamp_controllers{
+	position: relative;
+	left:50vw;
+  background-color: rgb(var(--accent_color));
+  color: rgb(var(--accent_text_color));
+	transform: translateX(-50%);
+	text-align: center;
+
+  width: 55vw;
+
+  padding: var(--div_padding_y) 0 var(--div_padding_y) 0;
+  border-radius: 5px;
+
+}
+
+.time_row{
+	display: inline-block;
+
+	padding-left: var(--div_padding_x);
+	padding-right: var(--div_padding_x);
+}
+
+#timestamp_collection{
+	text-align: center;
+}
+
+#timestamp_controllers{
+}
+
+#submit_timestamps{
+	text-align: center;
+}

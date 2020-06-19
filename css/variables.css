@@ -1,0 +1,20 @@
+:root {
+  --video_height: 25vw;
+	--text_height: 10vw;
+	--div_padding_x: 1.5vw;
+  --div_padding_y: 1.5vh;
+  --img_dims:10vw;
+  --inv_img_dims:80vw;
+
+
+	--header_color: 149, 165, 166;
+	--header_dk_color:127, 140, 141;
+
+	--accent_color: 9, 132, 227;
+  --accent_text_color: 255, 255, 255;
+
+  --font: Noto Sans, Charcoal, sans-serif;
+
+  /* Responses variables */
+  --question_text_size: 1.25em;
+}

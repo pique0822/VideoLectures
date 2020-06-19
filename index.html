@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Interactive Video Lectures</title>
+		<link rel="icon" href="imgs/vteractive_logo.png" type="image/icon type">
+		<link rel="stylesheet" href="css/variables.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/header.css">
+	</head>
+	<body>
+		<div id="firebaseui-auth-container"></div>
+		<div id="loader"></div>
+		<!-- header -->
+		<div id='title_block'>
+			<img id='logo_img' src='imgs/vteractive_name.png' />
+			<ul id='menu_buttons'>
+			  <li><button id='responses' onclick='goToResponses()'>Responses</button></li>
+			  <li><button id='new_video' onclick='goToNewVideo()'>Make a Video</button></li>
+			  <li><button class='active' id='load_video' onclick='goToLoadVideo()'>Find a Video</button></li>
+			</ul>
+		</div>
+
+		<!-- content -->
+		<div id='content'>
+			<div id='video_id'>
+				<input id='ID' type='text' maxlength="5" style="text-transform: uppercase"></input>
+				<button id='submit_id' onclick='loadID()'>Go</button>
+			</div>
+		</div>
+
+		<!-- scripts -->
+		<script src="js/index.js" charset="utf-8"></script>
+	</body>
+</html>

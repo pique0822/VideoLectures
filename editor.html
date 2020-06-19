@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Video Lecture Editor</title>
+		<link rel="icon" href="imgs/vteractive_logo.png" type="image/icon type">
+		<link rel="stylesheet" href="css/variables.css">
+		<link rel="stylesheet" type="text/css" href="css/editor.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/utils.css" />
+	</head>
+	<body>
+		<div id="firebaseui-auth-container"></div>
+		<div id="loader"></div>
+		<!-- loading screen -->
+		<div class='hidden' id="loading_screen">
+			<div class="waiting"></div>
+		</div>
+		<!-- header -->
+		<div id='title_block'>
+			<img id='logo_img' src='imgs/vteractive_name.png' />
+			<ul id='menu_buttons'>
+			  <li><button id='responses' onclick='goToResponses()'>Responses</button></li>
+			  <li><button class='active' id='new_video' onclick='goToNewVideo()'>Make a Video</button></li>
+			  <li><button id='load_video' onclick='goToLoadVideo()'>Find a Video</button></li>
+			</ul>
+		</div>
+		<div id='content_block'>
+			<!-- VIDEO CONTAINER -->
+			<div class='video_container' id='video_frame'>
+				<br>
+				<video id='video_player' controls></video>
+				<div class='row' id='video_upload_container'>
+					<label>Upload a video&nbsp;&nbsp;&nbsp;</label><input id='video_upload' type="file" accept="video/*" />
+				</div>
+			</div>
+
+			<br>
+			<!-- TIMESTAMP EDITOR -->
+			<div class="timestamp_container">
+				<div class='row' id='timestamp_controllers'>
+					<div class='time_row' id='time_select'>
+						<input type="number" id='hour' value="0" maxlength="2" max="1" min="0">
+						Hour
+						<input type="number" id='minute' value="0" maxlength="2" max="1" min="0">
+						Minute
+						<input type="number" id='second' value="0" maxlength="2" max="1" min="0">
+						Second
+					</div>
+					<div class='time_row' id='question_type'>
+						Question:
+						<input type="text" id='question' />
+					</div>
+					<div class='time_row' id='submit_button'>
+						<button id='submit' onclick="submitTimestamp()">Submit</button>
+					</div>
+				</div>
+				<div class='row' id='timestamp_collection'>
+				</div>
+				<br>
+				<br>
+				<div class='row' id='submit_timestamps'>
+					<button id='done' onclick='submitAll()'>Done</button>
+				</div>
+				<br>
+				<br>
+			</div>
+		</div>
+
+		<!-- popup -->
+		<div id="popup" class="modal hidden">
+			<div id='popup_main_content' class="modal-content">
+				<p id='popup_text'></p>
+				<h1 class="serious" id='popup_id'></h1>
+			</div>
+		</div>
+
+		<!-- scripts -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyClcxTy4TnKea5jPqVcVkoR626f4lHG8Xs",
+		    authDomain: "interactivevideolecture.firebaseapp.com",
+		    databaseURL: "https://interactivevideolecture.firebaseio.com",
+		    projectId: "interactivevideolecture",
+		    storageBucket: "interactivevideolecture.appspot.com",
+		    messagingSenderId: "5161219010",
+		    appId: "1:5161219010:web:64c89af841044856f39c5b",
+		    measurementId: "G-J3NJ0WKRF1"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		  firebase.analytics();
+
+		</script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+		<script type="text/javascript" src='js/editor.js'></script>
+	</body>
+</html>
