@@ -84,6 +84,8 @@ var uiConfig = {
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+		console.log('USER NOT NULL');
+		console.log(user);
     document.getElementById('firebaseui-auth-container').style.zIndex = 0;
     document.getElementById('firebaseui-auth-container').style.display = 'none';
     document.getElementById('loader').style.zIndex = 0;
