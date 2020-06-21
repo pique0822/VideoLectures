@@ -7,11 +7,15 @@
   --inv_img_dims:80vw;
 
 
-	--header_color: 149, 165, 166;
-	--header_dk_color:127, 140, 141;
+  --header_color: 255, 255, 255;
 
-	--accent_color: 9, 132, 227;
-  --accent_text_color: 255, 255, 255;
+	--accent_color_1: 0, 184, 148;
+  --accent_color_1_text: 255, 255, 255;
+
+  --accent_color_2: 200, 216, 217;
+
+  --accent_color_dark_1:175, 191, 192;
+
 
   --font: Noto Sans, Charcoal, sans-serif;
 
