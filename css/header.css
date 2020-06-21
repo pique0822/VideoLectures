@@ -8,7 +8,7 @@ body{
 
 /* header */
 #logo_img{
-	max-height: 15vh;
+	height: 7em;
 }
 
 #title_block{
