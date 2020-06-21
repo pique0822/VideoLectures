@@ -106,6 +106,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 			});
 
   }else {
+		document.getElementById('loader').style.display = 'block';
+		document.getElementById('firebaseui-auth-container').style.display = 'block';
     ui.start('#firebaseui-auth-container', uiConfig);
   }
 });

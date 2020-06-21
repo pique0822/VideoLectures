@@ -186,6 +186,8 @@ var uiConfig = {
 // The start method will wait until the DOM is loaded.
 firebase.auth().onAuthStateChanged(function(user) {
   if (!user) {
+		document.getElementById('loader').style.display = 'block';
+		document.getElementById('firebaseui-auth-container').style.display = 'block';
 		ui.start('#firebaseui-auth-container', uiConfig);
 }});
 // The start method will wait until the DOM is loaded.
