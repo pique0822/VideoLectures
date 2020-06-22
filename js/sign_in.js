@@ -6,9 +6,9 @@
 //   }
 // });
 // configuration of the observer:
-var config = { attributes: true, childList: true, characterData: true };
+// var config = { attributes: true, childList: true, characterData: true };
 // pass in the target node, as well as the observer options
-observer.observe(document.getElementById('firebaseui-auth-container'), config);
+// observer.observe(document.getElementById('firebaseui-auth-container'), config);
 
 
 var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -65,4 +65,4 @@ function setSignButtonText(){
 
 
 // pass in the target node, as well as the observer options
-observer.observe(document.getElementById('firebaseui-auth-container'), config);
+// observer.observe(document.getElementById('firebaseui-auth-container'), config);
