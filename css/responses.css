@@ -41,8 +41,8 @@ body{
 	display: flex;
   cursor: pointer;
 
-  background-color: rgb(var(--accent_color));
-	color: rgb(var(--accent_text_color));
+  background-color: rgb(var(--accent_color_1));
+	color: rgb(var(--accent_color_1_text));
   padding-left: 1vw;
 }
 .answers{
