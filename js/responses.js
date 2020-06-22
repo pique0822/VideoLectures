@@ -1,3 +1,7 @@
+firebase.auth().onAuthStateChanged(function(user) {
+	setSignButtonText();
+});
+
 content_responses = document.getElementById('all_responses');
 content_id = document.getElementById('video_ID');
 

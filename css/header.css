@@ -51,6 +51,9 @@ li button:hover:not(.active) {
   background-color: rgb(var(--accent_color_1));
 	color: rgb(var(--accent_color_1_text));
 }
+#sign_in{
+	float: right;
+}
 
 #content {
 	padding-top: var(--div_padding_x);

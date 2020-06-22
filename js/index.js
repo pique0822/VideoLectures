@@ -1,3 +1,6 @@
+firebase.auth().onAuthStateChanged(function(user) {
+	setSignButtonText();
+});
 // Header
 
 function goToResponses(){

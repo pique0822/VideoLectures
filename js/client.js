@@ -1,3 +1,6 @@
+firebase.auth().onAuthStateChanged(function(user) {
+	setSignButtonText();
+});
 video_player = document.getElementById('video');
 question_text = document.getElementById('question');
 response_text = document.getElementById('response');
