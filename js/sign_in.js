@@ -1,10 +1,10 @@
 
-var observer = new MutationObserver(function(mutations) {
-  if(document.getElementById('firebaseui-auth-container').innerHTML.length == 0){
-    document.getElementById('firebaseui-auth-container').style.zIndex = 0;
-    document.getElementById('firebaseui-auth-container').style.display = 'none';
-  }
-});
+// var observer = new MutationObserver(function(mutations) {
+//   if(document.getElementById('firebaseui-auth-container').innerHTML.length == 0){
+//     document.getElementById('firebaseui-auth-container').style.zIndex = 0;
+//     document.getElementById('firebaseui-auth-container').style.display = 'none';
+//   }
+// });
 // configuration of the observer:
 var config = { attributes: true, childList: true, characterData: true };
 // pass in the target node, as well as the observer options

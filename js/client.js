@@ -76,12 +76,13 @@ function getStream() {
   }
   var videoSource = camera_source;
   constraints = {
-    video: {deviceId: videoSource ? {exact: videoSource} : undefined}
+    video: { facingMode: "user" },
   };
   navigator.mediaDevices.getUserMedia(constraints)
     .then(gotStream)
     .catch(error => {
       console.log('getUserMedia error: ', error);
+			alert('In order to continue please give us permission to use your camera.');
     });
 }
 
