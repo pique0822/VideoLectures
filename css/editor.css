@@ -67,8 +67,8 @@ body{
 #timestamp_controllers{
 	position: relative;
 	left:50vw;
-  background-color: rgb(var(--accent_color));
-  color: rgb(var(--accent_text_color));
+  background-color: rgb(var(--accent_color_1));
+  color: rgb(var(--accent_color_1_text));
 	transform: translateX(-50%);
 	text-align: center;
 
