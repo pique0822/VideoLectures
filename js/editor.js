@@ -1,5 +1,14 @@
 firebase.auth().onAuthStateChanged(function(user) {
 	setSignButtonText();
+	if (user){
+		document.getElementById('firebaseui-auth-container').style.zIndex = 0;
+    document.getElementById('firebaseui-auth-container').style.display = 'none';
+    document.getElementById('loader').style.zIndex = 0;
+    document.getElementById('loader').style.display = 'none';
+		console.log('Signed In');
+	} else{
+		signUser();
+	}
 });
 video_input = document.getElementById('video_upload');
 video_output = document.getElementById('video_player');
