@@ -100,7 +100,7 @@ function extract_responses(code){
 			emails.push(email);
     }
 
-		content_responses.innerHTML = all_responses;
+		content_responses.innerHTML = all_responses.join(' ');
 
   });
 }
