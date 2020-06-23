@@ -17,8 +17,8 @@ function goToLoadVideo(){
 
 function loadID(){
 	ID = document.getElementById('ID').value;
-	var patt = /^[a-z0-9]{5}$/i;
+	var patt = /^[A-Za-z0-9]{5}$/i;
 	if(patt.test(ID)){
-		window.location.href = "client.html?id="+ID;
+		window.location.href = "client.html?id="+ID.toUpperCase();
 	}
 }
